@@ -36,3 +36,16 @@ if url_match:
         print(url)
 else:
     print("No URLS found")
+
+
+#........................................................................................................
+# Finding Hashtag
+hashtag_regex = r"\#[a-zA-z0-9_-+=!@#$%^&*()<>]*"
+
+hashtag_match = re.findall(hashtag_regex, data)
+
+if hashtag_match:
+    for hashtag in hashtag_match:
+        print(hashtag)
+else:
+    print("Hashtag not found")
