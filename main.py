@@ -12,11 +12,11 @@ Currency amounts
 """
 import re
  
-email_regex = r"\b[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z0-9._]{2,}\b"
 
-with open("forms.txt", "r") as file:
+with open("text.txt", "r") as file:
     data = file.read()
 
+email_regex = r"\b[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z0-9._]{2,}\b"
 email_match = re.findall(email_regex, data)
 
 if email_match:
@@ -24,3 +24,15 @@ if email_match:
         print(emails)
 else:
     print("No email founds")
+
+#........................................................................................................
+#  Finding URL
+url_regex = r"https?:\/\/(?:www\.)?[a-zA-Z0-9?.\-_*+#*]+\.[a-zA-Z]{2,}(?:\/\S*)?"
+
+url_match = re.findall(url_regex, data)
+
+if url_match:
+    for url in url_match:
+        print(url)
+else:
+    print("No URLS found")
