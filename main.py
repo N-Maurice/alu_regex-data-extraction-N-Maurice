@@ -36,3 +36,31 @@ if url_match:
         print(url)
 else:
     print("No URLS found")
+
+#........................................................................................................
+# Finding Hashtag
+hashtag_regex = r"\#[a-zA-z0-9_-+=!@#$%^&*()<>]*"
+
+hashtag_match = re.findall(hashtag_regex, data)
+
+if hashtag_match:
+    for hashtag in hashtag_match:
+        print(hashtag)
+else:
+    print("Hashtag not found")
+
+
+
+#.......................................................................................................
+# Searching for a phone number:
+phone_nbr_regex = r"\+?(?:\(\d{1,}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{3,4}"
+
+phone_nbr_match = re.findall(phone_nbr_regex,data)
+
+if phone_nbr_match:
+    for phone_number in phone_nbr_match:
+        print(phone_number)
+else:
+    print("No Phone Number Available To Display!!")
+
+
