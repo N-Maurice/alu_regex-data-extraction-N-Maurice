@@ -1,6 +1,4 @@
-# Regex Pattern Examples in Python
-
-## Project Overview
+# Regex Project Overview
 
 This small Python project shows **how to recognise and extract everyday text patterns** with the standard `re` module.  It can be used as a learning reference or as a starting‑point utility for cleaning or mining raw text.
 
@@ -9,6 +7,7 @@ The script accepts a text file or a raw string, applies a set of pre‑written r
 ---
 
 ## Patterns Covered
+
 **Category:**
 - Email addresses: Standard formats with optional sub‑domains and country‑code TLDs
 - Hashtags: Words starting with # (supports CamelCase)
